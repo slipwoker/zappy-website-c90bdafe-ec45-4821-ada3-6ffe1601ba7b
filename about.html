@@ -426,12 +426,12 @@
     // Check if background is transparent or rgba with 0 alpha
     const isTransparent = bgColor === 'transparent' || 
                          bgColor === 'rgba(0, 0, 0, 0)' ||
-                         (bgColor.startsWith('rgba') &amp;amp;&amp;amp; bgColor.includes(', 0)'));
+                         (bgColor.startsWith('rgba') &amp;amp;amp;&amp;amp;amp; bgColor.includes(', 0)'));
     
     if (isTransparent) {
       // Check for background-image or gradient
       const bgImage = computedStyle.backgroundImage;
-      if (bgImage &amp;amp;&amp;amp; bgImage !== 'none') {
+      if (bgImage &amp;amp;amp;&amp;amp;amp; bgImage !== 'none') {
         console.log('[Navbar] Navbar has background image/gradient, using dark text');
         bgColor = 'rgb(240, 240, 240)'; // Assume light background
       } else {
@@ -444,7 +444,7 @@
     
     // Calculate luminance to determine if background is light or dark
     const rgb = bgColor.match(/\d+/g);
-    if (rgb &amp;amp;&amp;amp; rgb.length &amp;gt;= 3) {
+    if (rgb &amp;amp;amp;&amp;amp;amp; rgb.length &amp;amp;gt;= 3) {
       const r = parseInt(rgb[0]);
       const g = parseInt(rgb[1]);
       const b = parseInt(rgb[2]);
@@ -580,7 +580,7 @@
       // ONLY apply inline positioning styles on mobile viewport
       // On desktop, the CSS handles hiding these buttons with display: none
       // Inline styles were breaking desktop layout by overriding CSS
-      const isMobileViewport = window.innerWidth &amp;lt;= 768;
+      const isMobileViewport = window.innerWidth &amp;amp;lt;= 768;
       
       if (mobileToggle) {
         // Icon sizing applies to all viewports for consistency
@@ -771,7 +771,7 @@
       phoneBtn.addEventListener('click', function() {
         // Get phone number from placeholder in page or use default
         const phoneLinks = document.querySelectorAll('a[href^="tel:"]');
-        const phoneNumber = phoneLinks.length &amp;gt; 0 
+        const phoneNumber = phoneLinks.length &amp;amp;gt; 0 
           ? phoneLinks[0].getAttribute('href').replace('tel:', '')
           : '[business_phone]';
         
@@ -788,7 +788,7 @@
     const handleWhatsAppVisibility = function() {
       const whatsappBtn = document.querySelector('.whatsapp-float');
       if (whatsappBtn) {
-        const isDesktop = window.innerWidth &amp;gt;= 769;
+        const isDesktop = window.innerWidth &amp;amp;gt;= 769;
         if (isDesktop) {
           whatsappBtn.style.setProperty('display', 'none', 'important');
           whatsappBtn.style.setProperty('visibility', 'hidden', 'important');
@@ -831,7 +831,7 @@
       <!-- Label badge -->
       <span class="about-intro-badge">הסיפור שלנו</span>
 
-      <h1 class="about-intro-heading">גלים את המוצרים<br></br><br></br>הכי <em>שווים</em> ברשת,<br></br><br></br>בשבילך</h1>
+      <h1 class="about-intro-heading">גלים את המוצרים<br></br><br></br><br></br><br></br>הכי <em>שווים</em> ברשת,<br></br><br></br><br></br><br></br>בשבילך</h1>
 
       <p class="about-intro-lead">אנחנו סורקים את האינטרנט כדי למצוא את המוצרים הפופולריים, המעניינים והמשתלמים ביותר — ומציגים אותם לך בצורה נוחה, ברורה ומעוררת השראה. כשאתה קונה דרך הקישורים שלנו, אנחנו מרוויחים עמלה קטנה מהמוכר המקורי — ללא תוספת מחיר עבורך.</p>
 
@@ -933,7 +933,7 @@
     <article class="story-band story-band--start">
       <div class="story-band__text">
         <span class="story-band__number" aria-hidden="true">01</span>
-        <h2 class="story-band__heading">האינטרנט מלא מוצרים.<br></br><br></br>אבל איפה מוצאים את הטובים?</h2>
+        <h2 class="story-band__heading">האינטרנט מלא מוצרים.<br></br><br></br><br></br><br></br>אבל איפה מוצאים את הטובים?</h2>
         <p class="story-band__body">כל יום מוצפים בגאדג'טים, ציוד כושר, מוצרים ירוקים ואביזרים לסמארטפון — מאות אתרים, אלפי מוצרים, ואפס סדר. קונים מתחילים להשוות מחירים ומסיימים בבלבול מוחלט. הרעש הדיגיטלי גדל, ואיתו גם החרטות שאחרי הקנייה.</p>
         <div class="story-band__tag-row">
           <span class="story-tag">יותר מדי אפשרויות</span>
@@ -972,7 +972,7 @@
       </figure>
       <div class="story-band__text story-band__text--end">
         <span class="story-band__number" aria-hidden="true">02</span>
-        <h2 class="story-band__heading">שלושה קהלים.<br></br><br></br>צורך אחד משותף.</h2>
+        <h2 class="story-band__heading">שלושה קהלים.<br></br><br></br><br></br><br></br>צורך אחד משותף.</h2>
         <p class="story-band__body">רוכשי טכנולוגיה צעירים שרוצים <strong>מוצרי טכנולוגיה מומלצים לקנייה</strong> בלי לבזבוז שעות על השוואות. קונים מודעים לסביבה שמחפשים מוצרים ירוקים וידידותיים לסביבה. חובבי כושר שזקוקים לציוד כושר משתלם אונליין — כולם רוצים את אותו הדבר: מישהו שכבר עשה את העבודה בשבילם.</p>
         <ul class="story-audience-list">
           <li><i class="fas fa-microchip" aria-hidden="true"></i><span>חובבי טכנולוגיה וגאדג'טים</span></li>
@@ -993,7 +993,7 @@
     <article class="story-band story-band--start">
       <div class="story-band__text">
         <span class="story-band__number" aria-hidden="true">03</span>
-        <h2 class="story-band__heading">גלה וקנה:<br></br><br></br>הקורא שלך לעולם הקנייה החכמה.</h2>
+        <h2 class="story-band__heading">גלה וקנה:<br></br><br></br><br></br><br></br>הקורא שלך לעולם הקנייה החכמה.</h2>
         <p class="story-band__body">אנחנו מרכזים את המוצרים הפופולריים ביותר, בודקים, מסננים ומציגים רק את מה שבאמת שווה. כל קישור באתר הוא המלצה אמיתית — ואנחנו מרוויחים עמלה רק כשאתם קונים דרכנו. כך האינטרסים שלנו ושלכם תמיד מיושרים: אנחנו מצליחים רק אם אתם מרוצים.</p>
         <div class="story-solution-metrics">
           <div class="story-metric">
@@ -1046,7 +1046,7 @@
     <!-- Section Header -->
     <div class="about-principles-header">
       <span class="about-principles-eyebrow">מה מנחה אותנו</span>
-      <h2 class="about-principles-title">העקרונות שעומדים מאחורי<br></br><br></br>כל המלצה שאנחנו נותנים</h2>
+      <h2 class="about-principles-title">העקרונות שעומדים מאחורי<br></br><br></br><br></br><br></br>כל המלצה שאנחנו נותנים</h2>
       <p class="about-principles-subtitle">בגלה וקנה, כל מוצר שאנחנו מציגים עובר סינון קפדני. אנחנו מרכזים מוצרים פופולריים ומומלצים ממקורות שונים — ומפנים אתכם ישירות לאתר המוכר המקורי לביצוע הרכישה.</p>
     </div>
 

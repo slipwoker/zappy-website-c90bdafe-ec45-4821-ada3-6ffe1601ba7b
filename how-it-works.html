@@ -426,12 +426,12 @@
     // Check if background is transparent or rgba with 0 alpha
     const isTransparent = bgColor === 'transparent' || 
                          bgColor === 'rgba(0, 0, 0, 0)' ||
-                         (bgColor.startsWith('rgba') &amp;amp;&amp;amp; bgColor.includes(', 0)'));
+                         (bgColor.startsWith('rgba') &amp;amp;amp;&amp;amp;amp; bgColor.includes(', 0)'));
     
     if (isTransparent) {
       // Check for background-image or gradient
       const bgImage = computedStyle.backgroundImage;
-      if (bgImage &amp;amp;&amp;amp; bgImage !== 'none') {
+      if (bgImage &amp;amp;amp;&amp;amp;amp; bgImage !== 'none') {
         console.log('[Navbar] Navbar has background image/gradient, using dark text');
         bgColor = 'rgb(240, 240, 240)'; // Assume light background
       } else {
@@ -444,7 +444,7 @@
     
     // Calculate luminance to determine if background is light or dark
     const rgb = bgColor.match(/\d+/g);
-    if (rgb &amp;amp;&amp;amp; rgb.length &amp;gt;= 3) {
+    if (rgb &amp;amp;amp;&amp;amp;amp; rgb.length &amp;amp;gt;= 3) {
       const r = parseInt(rgb[0]);
       const g = parseInt(rgb[1]);
       const b = parseInt(rgb[2]);
@@ -580,7 +580,7 @@
       // ONLY apply inline positioning styles on mobile viewport
       // On desktop, the CSS handles hiding these buttons with display: none
       // Inline styles were breaking desktop layout by overriding CSS
-      const isMobileViewport = window.innerWidth &amp;lt;= 768;
+      const isMobileViewport = window.innerWidth &amp;amp;lt;= 768;
       
       if (mobileToggle) {
         // Icon sizing applies to all viewports for consistency
@@ -771,7 +771,7 @@
       phoneBtn.addEventListener('click', function() {
         // Get phone number from placeholder in page or use default
         const phoneLinks = document.querySelectorAll('a[href^="tel:"]');
-        const phoneNumber = phoneLinks.length &amp;gt; 0 
+        const phoneNumber = phoneLinks.length &amp;amp;gt; 0 
           ? phoneLinks[0].getAttribute('href').replace('tel:', '')
           : '[business_phone]';
         
@@ -788,7 +788,7 @@
     const handleWhatsAppVisibility = function() {
       const whatsappBtn = document.querySelector('.whatsapp-float');
       if (whatsappBtn) {
-        const isDesktop = window.innerWidth &amp;gt;= 769;
+        const isDesktop = window.innerWidth &amp;amp;gt;= 769;
         if (isDesktop) {
           whatsappBtn.style.setProperty('display', 'none', 'important');
           whatsappBtn.style.setProperty('visibility', 'hidden', 'important');
@@ -945,7 +945,7 @@
     <!-- RIGHT: Large H2 heading block -->
     <div class="hiws-heading-col">
       <span class="hiws-eyebrow">המספרים מדברים</span>
-      <h2 class="hiws-h2">מה שהופך את<br></br><br></br><span class="hiws-h2-accent">גלה וקנה</span><br></br><br></br>לפלטפורמה<br></br><br></br>שכדאי להכיר</h2>
+      <h2 class="hiws-h2">מה שהופך את<br></br><br></br><br></br><br></br><span class="hiws-h2-accent">גלה וקנה</span><br></br><br></br><br></br><br></br>לפלטפורמה<br></br><br></br><br></br><br></br>שכדאי להכיר</h2>
       <p class="hiws-subtitle">בחירה מונחית טרנדים, מגוון קטגוריות רחב, ומסלול ישיר מגילוי המוצר ועד לרכישה אצל הספק המקורי — הכל במקום אחד.</p>
       <div class="hiws-accent-line" aria-hidden="true"></div>
     </div>

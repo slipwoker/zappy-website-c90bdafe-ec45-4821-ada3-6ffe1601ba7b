@@ -416,12 +416,12 @@
     // Check if background is transparent or rgba with 0 alpha
     const isTransparent = bgColor === 'transparent' || 
                          bgColor === 'rgba(0, 0, 0, 0)' ||
-                         (bgColor.startsWith('rgba') &amp;amp;&amp;amp; bgColor.includes(', 0)'));
+                         (bgColor.startsWith('rgba') &amp;amp;amp;&amp;amp;amp; bgColor.includes(', 0)'));
     
     if (isTransparent) {
       // Check for background-image or gradient
       const bgImage = computedStyle.backgroundImage;
-      if (bgImage &amp;amp;&amp;amp; bgImage !== 'none') {
+      if (bgImage &amp;amp;amp;&amp;amp;amp; bgImage !== 'none') {
         console.log('[Navbar] Navbar has background image/gradient, using dark text');
         bgColor = 'rgb(240, 240, 240)'; // Assume light background
       } else {
@@ -434,7 +434,7 @@
     
     // Calculate luminance to determine if background is light or dark
     const rgb = bgColor.match(/\d+/g);
-    if (rgb &amp;amp;&amp;amp; rgb.length &amp;gt;= 3) {
+    if (rgb &amp;amp;amp;&amp;amp;amp; rgb.length &amp;amp;gt;= 3) {
       const r = parseInt(rgb[0]);
       const g = parseInt(rgb[1]);
       const b = parseInt(rgb[2]);
@@ -570,7 +570,7 @@
       // ONLY apply inline positioning styles on mobile viewport
       // On desktop, the CSS handles hiding these buttons with display: none
       // Inline styles were breaking desktop layout by overriding CSS
-      const isMobileViewport = window.innerWidth &amp;lt;= 768;
+      const isMobileViewport = window.innerWidth &amp;amp;lt;= 768;
       
       if (mobileToggle) {
         // Icon sizing applies to all viewports for consistency
@@ -761,7 +761,7 @@
       phoneBtn.addEventListener('click', function() {
         // Get phone number from placeholder in page or use default
         const phoneLinks = document.querySelectorAll('a[href^="tel:"]');
-        const phoneNumber = phoneLinks.length &amp;gt; 0 
+        const phoneNumber = phoneLinks.length &amp;amp;gt; 0 
           ? phoneLinks[0].getAttribute('href').replace('tel:', '')
           : '[business_phone]';
         
@@ -778,7 +778,7 @@
     const handleWhatsAppVisibility = function() {
       const whatsappBtn = document.querySelector('.whatsapp-float');
       if (whatsappBtn) {
-        const isDesktop = window.innerWidth &amp;gt;= 769;
+        const isDesktop = window.innerWidth &amp;amp;gt;= 769;
         if (isDesktop) {
           whatsappBtn.style.setProperty('display', 'none', 'important');
           whatsappBtn.style.setProperty('visibility', 'hidden', 'important');
@@ -938,7 +938,7 @@
     <!-- Section Header -->
     <div class="index-features-header">
       <span class="index-features-eyebrow">למה גלה וקנה?</span>
-      <h2 class="index-features-title">שלושה עקרונות שהופכים<br></br><br></br>קנייה אונליין לחוויה</h2>
+      <h2 class="index-features-title">שלושה עקרונות שהופכים<br></br><br></br><br></br><br></br>קנייה אונליין לחוויה</h2>
       <p class="index-features-subtitle">אנחנו מרכזים את המוצרים הפופולריים ביותר ברשת, בודקים, מסננים ומגישים לכם — עם קישורים ישירים לרכישה בטוחה.</p>
     </div>
 
@@ -967,7 +967,7 @@
         <!-- Floating stat snippet -->
         <div class="index-features-stat-chip" aria-label="נתון סטטיסטי">
           <span class="index-features-stat-number">500+</span>
-          <span class="index-features-stat-label">מוצרים<br></br><br></br>נבדקים בשבוע</span>
+          <span class="index-features-stat-label">מוצרים<br></br><br></br><br></br><br></br>נבדקים בשבוע</span>
         </div>
       </article>
 
@@ -1035,7 +1035,7 @@
     <!-- Intro block (START = right in RTL) -->
     <div class="showcase-intro">
       <span class="showcase-eyebrow">עולמות התוכן שלנו</span>
-      <h2 class="showcase-heading">ארבעה עולמות.<br></br><br></br>אינסוף ממצאים.</h2>
+      <h2 class="showcase-heading">ארבעה עולמות.<br></br><br></br><br></br><br></br>אינסוף ממצאים.</h2>
       <p class="showcase-body">אנחנו סורקים את הרשת ומרכזים עבורך את המוצרים הפופולריים ביותר — גאדג'טים חדשניים, מוצרים ירוקים, ציוד ביצועים ותגליות ויראליות. לוחצים, מגלים, קונים ישירות מהמוכר המקורי.</p>
       <a href="/categories" class="showcase-cta">
         <span>גלה את כל הקטגוריות</span>
@@ -1142,7 +1142,7 @@
     <!-- Section Header -->
     <header class="index-benefits-header">
       <p class="index-benefits-eyebrow">למה לגלות דרכנו?</p>
-      <h2 class="index-benefits-title">הדרך החכמה לגלות מוצרים פופולריים<br></br><br></br><span class="index-benefits-title-accent">ולקנות בביטחון</span></h2>
+      <h2 class="index-benefits-title">הדרך החכמה לגלות מוצרים פופולריים<br></br><br></br><br></br><br></br><span class="index-benefits-title-accent">ולקנות בביטחון</span></h2>
       <p class="index-benefits-subtitle">אנחנו מרכזים עבורכם את המוצרים הטובים ביותר מכל רחבי הרשת — בלי לחפש, בלי לבזבז זמן. רק לבחור ולקנות.</p>
     </header>
 
@@ -1257,7 +1257,7 @@
     <div class="index-cta-badge">שיתופי פעולה ושיווק</div>
 
     <!-- Headline -->
-    <h2 class="index-cta-heading">מעוניינים לשתף פעולה<br></br><br></br>או יש לכם שאלות?</h2>
+    <h2 class="index-cta-heading">מעוניינים לשתף פעולה<br></br><br></br><br></br><br></br>או יש לכם שאלות?</h2>
 
     <!-- Body copy -->
     <p class="index-cta-body">אנחנו תמיד שמחים לשמוע ממשווקים, מותגים ואנשים שרוצים להבין איך המודל שלנו עובד. בין אם אתם מחפשים שיתוף פעולה בשיווק שותפים, רוצים לדעת כיצד אנחנו בוחרים מוצרים פופולריים לקנייה, או סתם סקרנים — דלתנו פתוחה.</p>
