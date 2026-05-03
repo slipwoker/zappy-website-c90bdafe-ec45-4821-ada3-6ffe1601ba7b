@@ -417,12 +417,12 @@
     // Check if background is transparent or rgba with 0 alpha
     const isTransparent = bgColor === 'transparent' || 
                          bgColor === 'rgba(0, 0, 0, 0)' ||
-                         (bgColor.startsWith('rgba') &amp;amp;amp;&amp;amp;amp; bgColor.includes(', 0)'));
+                         (bgColor.startsWith('rgba') &amp;&amp; bgColor.includes(', 0)'));
     
     if (isTransparent) {
       // Check for background-image or gradient
       const bgImage = computedStyle.backgroundImage;
-      if (bgImage &amp;amp;amp;&amp;amp;amp; bgImage !== 'none') {
+      if (bgImage &amp;&amp; bgImage !== 'none') {
         console.log('[Navbar] Navbar has background image/gradient, using dark text');
         bgColor = 'rgb(240, 240, 240)'; // Assume light background
       } else {
@@ -435,7 +435,7 @@
     
     // Calculate luminance to determine if background is light or dark
     const rgb = bgColor.match(/\d+/g);
-    if (rgb &amp;amp;amp;&amp;amp;amp; rgb.length &amp;amp;gt;= 3) {
+    if (rgb &amp;&amp; rgb.length &gt;= 3) {
       const r = parseInt(rgb[0]);
       const g = parseInt(rgb[1]);
       const b = parseInt(rgb[2]);
@@ -571,7 +571,7 @@
       // ONLY apply inline positioning styles on mobile viewport
       // On desktop, the CSS handles hiding these buttons with display: none
       // Inline styles were breaking desktop layout by overriding CSS
-      const isMobileViewport = window.innerWidth &amp;amp;lt;= 768;
+      const isMobileViewport = window.innerWidth &lt;= 768;
       
       if (mobileToggle) {
         // Icon sizing applies to all viewports for consistency
@@ -762,7 +762,7 @@
       phoneBtn.addEventListener('click', function() {
         // Get phone number from placeholder in page or use default
         const phoneLinks = document.querySelectorAll('a[href^="tel:"]');
-        const phoneNumber = phoneLinks.length &amp;amp;gt; 0 
+        const phoneNumber = phoneLinks.length &gt; 0 
           ? phoneLinks[0].getAttribute('href').replace('tel:', '')
           : '[business_phone]';
         
@@ -779,7 +779,7 @@
     const handleWhatsAppVisibility = function() {
       const whatsappBtn = document.querySelector('.whatsapp-float');
       if (whatsappBtn) {
-        const isDesktop = window.innerWidth &amp;amp;gt;= 769;
+        const isDesktop = window.innerWidth &gt;= 769;
         if (isDesktop) {
           whatsappBtn.style.setProperty('display', 'none', 'important');
           whatsappBtn.style.setProperty('visibility', 'hidden', 'important');
@@ -811,7 +811,7 @@
 </script>
   
   <main>
-    <section class="about-intro-section" data-layout-spec="אודות-intro" dir="rtl">
+    <section class="about-intro-section" data-layout-spec="אודות-intro" dir="rtl" id="about-intro-section" style="margin-top: -71px !important; padding-top: 71px !important;">
   <!-- Decorative background bloom -->
   <div class="about-intro-bloom about-intro-bloom-1" aria-hidden="true"></div>
   <div class="about-intro-bloom about-intro-bloom-2" aria-hidden="true"></div>
@@ -820,11 +820,11 @@
     <!-- Content Column (RIGHT in RTL) -->
     <div class="about-intro-content">
       <!-- Label badge -->
-      <span class="about-intro-badge">הסיפור שלנו</span>
+      <p><span class="about-intro-badge">הסיפור שלנו</span>
 
-      <h1 class="about-intro-heading">גלים את המוצרים<br><br><br><br><br><br><br><br>הכי <em>שווים</em> ברשת,<br><br><br><br><br><br><br><br>בשבילך</h1>
+      </p><h1 class="about-intro-heading">גלים את המוצרים<br><br><br><br><br><br><br><br>הכי <em>שווים</em> ברשת,<br><br><br><br><br><br><br><br>בשבילך</h1>
 
-      <p class="about-intro-lead">אנחנו סורקים את האינטרנט כדי למצוא את המוצרים הפופולריים, המעניינים והמשתלמים ביותר — ומציגים אותם לך בצורה נוחה, ברורה ומעוררת השראה. כשאתה קונה דרך הקישורים שלנו, אנחנו מרוויחים עמלה קטנה מהמוכר המקורי — ללא תוספת מחיר עבורך.</p>
+      <p class="about-intro-lead" style="">המטרה שלנו להפוך את נושא רכישת מוצרים באינטרנט לחווית משתמש קלה ונוחה לכן ריכזנו אבורכם את כלל המוצרים המבוקשים והפופלרים ברשת למקום אחד שבו תוכלו לרכוש בקלות ובנוחות&nbsp;<br></p>
 
       <!-- Mission statement -->
       <div class="about-intro-mission">
@@ -864,7 +864,7 @@
       </svg>
 
       <div class="about-intro-image-wrapper">
-        <img data-placeholder="about-intro-image-1" data-context="A vibrant, editorial-style lifestyle photo showing a person browsing a curated e-commerce product discovery website on a modern laptop or tablet. The scene is warm and aspirational — a stylish desk setup with trending gadgets, tech accessories, and lifestyle products visible around the person. The mood is contemporary, creative, and trustworthy, evoking the feeling of smart online shopping and affiliate product curation. Colors lean toward purple and teal tones to match the brand palette." width="600" height="680" src="/assets/site-about-intro-image-1.webp" alt="גלישה וגילוי מוצרים פופולריים אונליין דרך אתר גלה וקנה">
+        <img data-placeholder="about-intro-image-1" data-context="A vibrant, editorial-style lifestyle photo showing a person browsing a curated e-commerce product discovery website on a modern laptop or tablet. The scene is warm and aspirational — a stylish desk setup with trending gadgets, tech accessories, and lifestyle products visible around the person. The mood is contemporary, creative, and trustworthy, evoking the feeling of smart online shopping and affiliate product curation. Colors lean toward purple and teal tones to match the brand palette." width="600" height="680" src="/assets/site-about-intro-image-1.webp" alt="גלישה וגילוי מוצרים פופולריים אונליין דרך אתר גלה וקנה" data-element-type="image" data-element-id="img-1777823343368-14mcy24x6" style="">
         <!-- Floating accent card -->
         <div class="about-intro-float-card">
           <span class="about-intro-float-icon" aria-hidden="true">
