@@ -1,0 +1,59 @@
+# Business — Generative Engine Optimization Map
+
+---
+
+## Pages
+
+### בית
+https://example.com
+מוצרי טכנולוגיה מומלצים לקנייה, ציוד כושר משתלם, אביזרי סמארטפון ומוצרים ירוקים — הכל במקום אחד. גלה את המוצרים הפופולריים ביותר וקנה בקליק אחד!
+
+### אודות
+https://example.com/about
+אנחנו סורקים את האינטרנט כדי להביא לך את המוצרים הכי שווים — מגאדג&#39;טים חכמים ועד ציוד לבעלי חיים. למד מי אנחנו ולמה אלפי קונים סומכים עלינו כל יום.
+
+### איך זה עובד
+https://example.com/how-it-works
+גלה איך אנחנו אוספים את המוצרים המשתלמים ביותר, משווים מחירים ומפנים אותך ישירות לעסקה הטובה ביותר. שופינג אונליין חכם מעולם לא היה פשוט יותר — התחל עכשיו!
+
+### צור קשר
+https://example.com/contact
+רוצה להמליץ על מוצר, לשתף פעולה איתנו או סתם לשאול שאלה? צור איתנו קשר ונחזור אליך במהירות. אנחנו כאן בשבילך — כי קנייה אונליין מוצרים פופולריים בישראל מתחילה בשיחה טובה.
+
+### Products
+https://example.com/products
+המוצרים שלנו - גלה וקנה
+
+### Product Detail
+https://example.com/product/:slug
+פרטי המוצר - גלה וקנה
+
+### Category
+https://example.com/category/:slug
+מוצרים - גלה וקנה
+
+## Legal & Policy
+
+### Privacy Policy
+https://example.com/privacy
+Information about how user data is collected, stored, and protected.
+
+### Terms & Conditions
+https://example.com/terms
+Legal terms describing service usage, rights, and policies.
+
+### Accessibility Statement
+https://example.com/accessibility
+Information about WCAG compliance and accessibility features.
+
+---
+
+# Business Context (for LLM understanding)
+
+## About Business
+---
+
+# Additional Resources
+
+- **Sitemap**: https://example.com/sitemap.xml
+- **Robots.txt**: https://example.com/robots.txt
